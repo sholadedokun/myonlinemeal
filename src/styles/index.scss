@@ -1,8 +1,115 @@
+@import 'font-awesome.min.css';
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,300italic,500,500italic');
+
 body{
     margin: 0;
     padding: 0;
+    font-family: 'Lato','Raleway';
     background: #fff;
 }
+.header{
+    // position: absolute;
+    // top:0;
+    // width:100%;
+}
 .navbar{
+    padding: 0.5em 0 ;
     border-radius: 0;
+    background: none !important;
+    border:0;
+    margin-bottom: 0;
+    .nav{
+        float:right;
+        text-transform: capitalize;
+        li{
+            margin-left: 3em;
+            text-align: right;
+            a{
+                padding-right: 0;
+                padding-left: 0;
+                outline: none;
+            }
+            a:hover, a:focus{
+                color:#222 ;
+            }
+
+        }
+        .active{
+            border-bottom:2px solid #555;
+            a{
+                background: none !important;
+                color: #333 !important;
+            }
+        }
+    }
+    .navbar-brand{
+        color:#222;
+    }
+    .navbar-toggle{
+        border:none;
+        .icon-bar{
+            background:#222 !important;
+            margin-top:2px;
+        }
+
+    }
+    :focus{
+        background: none !important;
+        color:#666;
+    }
+}
+.banner{
+    background: url("../images/banner.jpg") center;
+    min-height: 30vh;
+}
+.register{
+    margin-top: 30vh;
+    background: #fff;
+    padding:1em 2em;
+    input, button{
+        width: 100%;
+        padding:0.5em 1em;
+    }
+    p{
+        text-align: center;
+        font-size: 0.85em
+    }
+
+}
+input{
+    background: #fff;
+    border: 1px solid #bbb;
+    outline: none;
+    margin:0.5em 0;
+}
+button{
+    background: #b33;
+    color: #fff;
+    margin: 0.5em 0;
+    outline: none;
+    cursor: pointer;
+}
+a{
+    color: #d55;
+}
+.section{
+    padding: 1em 2em;
+    text-align: center;
+    h1, h2, h3, h4{
+        text-transform: uppercase;
+    }
+
+    .category{
+        margin-bottom: 2em;
+        span.fa{
+            border: 1px solid #b33;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 4em !important;
+            padding: 1em 0;
+            width: 3em;
+            height: 3em;
+        }
+    }
 }

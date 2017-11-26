@@ -23,20 +23,13 @@ class Header extends Component {
     authenticated(){
         let resolvedLinks = (this.props.authenticated)?
             [
-                <NavItem>
-                    <Link to="/dashboard">dashboard</Link>
-                </NavItem>,
-                <NavItem>
-                    <span onClick={this.signoutUser.bind(this)}>logout</span>
-                </NavItem>
+
+                <NavItem href="/dashboard">dashboard</NavItem>,
+                <NavItem onClick={this.signoutUser.bind(this)}>logout</NavItem>,
             ]:
             [
-                <NavItem>
-                    <span onClick={()=>this.setState({modalLoad:'login', modalOpen:true})}>login</span>
-                </NavItem>,
-                <NavItem>
-                    <span onClick={()=>this.setState({modalLoad:'register', modalOpen:true})}>register</span>
-                </NavItem>
+                <NavItem  onClick={()=>this.setState({modalLoad:'login', modalOpen:true})}>login</NavItem>,
+                <NavItem  onClick={()=>this.setState({modalLoad:'register', modalOpen:true})}>register</NavItem>
             ]
             return resolvedLinks
     }
@@ -57,15 +50,9 @@ class Header extends Component {
                     </Navbar.Header>
                     <Navbar.Collapse>
                         <Nav>
-                            <NavItem class="active">
-                                <Link to="/">Home</Link>
-                            </NavItem>
-                            <NavItem>
-                                <Link to="/howitworks">How it Works</Link>
-                            </NavItem>
-                            <NavItem>
-                                <Link to="/help">Help</Link>
-                            </NavItem>
+                            <NavItem className="active" href="/">Home</NavItem>
+                            <NavItem href="/howitworks">How it Works</NavItem>
+                            <NavItem href="/help">Help</NavItem>
                             {
                                 this.authenticated()
                             }

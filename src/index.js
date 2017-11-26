@@ -14,7 +14,7 @@ import reducers from './js/reducers';
 const createStoreWithMiddleware = applyMiddleware(reduxThunk)(createStore);
 const store = createStoreWithMiddleware(reducers);
 
-const token = localStorage.getItem('TheCandleToken');
+const token = localStorage.getItem('MyOnlineMealToken');
 // If we have a token, consider the user to be signed in
 if (token) {
   // we need to update application state

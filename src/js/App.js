@@ -17,7 +17,7 @@ class App extends Component {
     return (
 
         <Router>
-            <Grid fluid className="App">
+            <Grid fluid={true} className="App">
                 <Header className="App-header"></Header>
                 <Route  exact path="/"  component={Home} />
                 <Route  exact path="/Howitworks"  component={Howitworks} />
@@ -27,9 +27,7 @@ class App extends Component {
                 <Route  exact path="/help"  component={Help} />
             </Grid>
         </Router>
-
     );
-
   }
 }
 

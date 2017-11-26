@@ -19,7 +19,7 @@ export function signinUser( username, password ) {
                 // - Update state to indicate user is authenticated
                 dispatch({ type: AUTH_USER });
                 // - Save the JWT token
-                localStorage.setItem('TheCandleToken', response.data.token);
+                localStorage.setItem('MyOnlineMealToken', response.data.token);
                 resolve(response)
             })
             .catch(() => {
@@ -38,7 +38,7 @@ export function signUpUser(values) {
             .then(response => {
 
                 dispatch({ type: AUTH_USER });
-                localStorage.setItem('TheCandleToken', response.data.token);
+                localStorage.setItem('MyOnlineMealToken', response.data.token);
                 resolve (response)
             })
             .catch(error => {
@@ -57,14 +57,14 @@ export function authError(error) {
 }
 
 export function signoutUser() {
-  localStorage.removeItem('TheCandleToken');
+  localStorage.removeItem('MyOnlineMealToken');
   return { type: UNAUTH_USER };
 }
 
 export function fetchProduct() {
     return function(dispatch) {
         axios.get(`${ROOT_URL}/inventory`, {
-            headers: { authorization: localStorage.getItem('TheCandleToken') }
+            headers: { authorization: localStorage.getItem('MyOnlineMealToken') }
         })
         .then(response => {
             dispatch({
