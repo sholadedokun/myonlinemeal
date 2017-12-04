@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import Header from './components/header';
 import {BrowserRouter as Router,  Route } from 'react-router-dom';
 import {Grid, Row} from 'react-bootstrap'
-
-
+import Footer from './components/footer';
 import Home from './components/home'
 import Profile from './components/profile'
 import Howitworks from './components/howitworks'
@@ -25,6 +24,7 @@ class App extends Component {
                 <Route  exact path="/whymom"  component={Whymom} />
                 <Route  exact path="/login"  component={Login} />
                 <Route  exact path="/help"  component={Help} />
+                <Footer />
             </Grid>
         </Router>
     );

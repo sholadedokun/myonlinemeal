@@ -9,8 +9,8 @@ export default class Register extends Component {
                 <input type="text" name="email" placeholder="Your Email Address" />
                 <button>GET STARTED</button>
                 <p>
-                    Already have an account? <a href="#">Login Here</a><br/>
-                    By continuing, you are agreeing to our <a href="#">terms and condition</a>
+                    Already have an account? <a >Login Here</a><br/>
+                    By continuing, you are agreeing to our <a>terms and condition</a>
                 </p>
             </Col>
         )

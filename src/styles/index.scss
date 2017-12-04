@@ -13,6 +13,7 @@ ul{
     padding:0;
     margin: 0;
 }
+
 .header{
     // position: absolute;
     // top:0;
@@ -65,8 +66,12 @@ ul{
     }
 }
 .banner{
-    background: url("../images/banner.jpg") center no-repeat;
+    background: url("../images/banner.jpg") no-repeat top fixed;
+    // background-attachment: fixed;
     min-height: 30vh;
+    h1,h2, h3, h4{
+        letter-spacing: 1px
+    }
 }
 .register{
     margin-top: 30vh;
@@ -103,18 +108,19 @@ a{
     text-align: center;
     h1, h2, h3, h4{
         text-transform: uppercase;
+        letter-spacing: 2px;
     }
 
     .category{
         margin-bottom: 2em;
         span.fa{
-            border: 1px solid #b33;
+            border: 4px solid #b33;
             border-radius: 50%;
             text-align: center;
             font-size: 4em !important;
-            padding: 1em 0;
-            width: 3em;
-            height: 3em;
+            padding: 0.5em 0;
+            width: 2em;
+            height: 2em;
         }
     }
 }
@@ -148,4 +154,49 @@ a{
         padding: 2em;
         color: #b33;
     }
+}
+//our Chef
+.ourchef{
+    background: url('../images/chef_xs.jpg') no-repeat center fixed;
+    min-height: 350px;
+}
+//customer reviews
+.comment{
+    span{
+        display: inline-block;
+    }
+    .commenter{
+        font-weight: bold;
+        margin: 1em 0;
+        text-transform: capitalize;
+    }
+}
+
+//footer
+.footer{
+    background:#f4fff4;
+    padding-bottom: 4em;
+    h3{
+        line-height: 1.5em;
+
+    }
+    .fa{
+        margin: 1em 0.25em;
+    }
+    a{
+        color: #777;
+    }
+    .hrule{
+        background: #dedede;
+        margin:1.5em 0;
+    }
+}
+.hrule{
+    height: 1px;
+    width: 100%;
+    background: #999;
+    margin: 1em 0;
+}
+.copyright{
+    color: #bbb;
 }
