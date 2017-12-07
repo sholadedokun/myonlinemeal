@@ -2,7 +2,8 @@ import {
   AUTH_USER,
   UNAUTH_USER,
   AUTH_ERROR,
-  FETCH_OFFERS
+  FETCH_OFFERS,
+  SWITCH_MODAL_STATE
 } from '../actions/actionTypes';
 
 export default function(state = {}, action) {
@@ -13,6 +14,8 @@ export default function(state = {}, action) {
       return { ...state, authenticated: false };
     case AUTH_ERROR:
       return { ...state, error: action.payload };
+    case SWITCH_MODAL_STATE:
+        return {...state, isOpen:action.payload.isOpen, page:action.payload.page}
   }
   return state;
 }

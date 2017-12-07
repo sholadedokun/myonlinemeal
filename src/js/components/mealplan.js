@@ -5,7 +5,6 @@ import Category from './categoryList'
 const MealPlan =(props)=>
     <Row className="section mealPlan">
         <Col xs="12" className="details">
-
             <Heading title="Our Awesome Meal Plans" size="md" marginBottom="2em" />
             <p>
                 Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue
@@ -24,7 +23,6 @@ const MealPlan =(props)=>
             Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue
             eu vulpu magna erat. Aliquam erat volutpat.
             </Row>
-
         </Col>
     </Row>
 export default MealPlan

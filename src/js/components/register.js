@@ -1,7 +1,9 @@
 import React, {Component} from 'react';
 import {Col} from 'react-bootstrap';
 import Heading from './heading';
-export default class Register extends Component {
+import {connect} from 'react-redux';
+import {modalStatus} from '../actions/userActions'
+class Register extends Component {
     render(){
         return(
             <Col xs="12" md="4" className="register">
@@ -9,10 +11,11 @@ export default class Register extends Component {
                 <input type="text" name="email" placeholder="Your Email Address" />
                 <button>GET STARTED</button>
                 <p>
-                    Already have an account? <a >Login Here</a><br/>
+                    Already have an account? <a onClick={()=>this.props.modalStatus(true, 'login')} >Login Here</a><br/>
                     By continuing, you are agreeing to our <a>terms and condition</a>
                 </p>
             </Col>
         )
     }
 }
+export default connect(null, {modalStatus})(Register)

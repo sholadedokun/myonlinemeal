@@ -8,27 +8,49 @@ import Profile from './components/profile'
 import Howitworks from './components/howitworks'
 import Ourmission from './components/ourmission'
 import Whymom from './components/whymom'
-import Login from './components/login'
 import Help from './components/help'
 import requireAuth from './components/auth/require_auth';
+import ReactModal from 'react-modal';
+import Login from './components/auth/loginUser';
+import Register from './components/auth/register';
+import {modalStatus} from './actions/userActions'
+import { connect } from 'react-redux';
 class App extends Component {
-  render() {
-    return (
-
-        <Router>
-            <Grid fluid={true} className="App">
-                <Header className="App-header"></Header>
-                <Route  exact path="/"  component={Home} />
-                <Route  exact path="/Howitworks"  component={Howitworks} />
-                <Route  exact path="/ourmission"  component={Ourmission} />
-                <Route  exact path="/whymom"  component={Whymom} />
-                <Route  exact path="/login"  component={Login} />
-                <Route  exact path="/help"  component={Help} />
-                <Footer />
-            </Grid>
-        </Router>
-    );
-  }
+    handleCloseModal (route) {
+        // if(route) this.props.history.push(route)
+        this.props.modalStatus(false, '')
+    }
+    render() {
+        const {modalLoad, modalOpen}=this.props;
+        return (
+            <Router>
+                <Grid fluid={true} className="App">
+                    <Header className="App-header"></Header>
+                    <Route  exact path="/"  component={Home} />
+                    <Route  exact path="/Howitworks"  component={Howitworks} />
+                    <Route  exact path="/ourmission"  component={Ourmission} />
+                    <Route  exact path="/whymom"  component={Whymom} />
+                    <Route  exact path="/help"  component={Help} />
+                    <Footer />
+                    <ReactModal
+                        isOpen={modalOpen} shouldCloseOnOverlayClick={true}
+                        onRequestClose={this.handleCloseModal.bind(this)}
+                    >
+                        {
+                            (modalLoad==='login')?
+                                <Login close={this.handleCloseModal.bind(this)} />:
+                                <Register close={this.handleCloseModal.bind(this)} />
+                        }
+                    </ReactModal>
+                </Grid>
+            </Router>
+        );
+    }
 }
-
-export default App;
+function mapStateToProps(state){
+    return{
+        modalOpen:state.user.isOpen,
+        modalLoad:state.user.page
+    }
+}
+export default connect(mapStateToProps, {modalStatus})(App);
