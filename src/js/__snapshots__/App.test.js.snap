@@ -1,0 +1,633 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`>>>APP --- Snapshot +++capturing Snapshot of APP 1`] = `
+<div
+  className="App container-fluid"
+>
+  <div
+    className="header row"
+  >
+    <nav
+      className="navbar navbar-inverse"
+    >
+      <div
+        className="container"
+      >
+        <div
+          className="navbar-header"
+        >
+          <a
+            className="navbar-brand"
+            href="#"
+          >
+            MOM
+          </a>
+          <button
+            className="navbar-toggle collapsed"
+            onClick={[Function]}
+            type="button"
+          >
+            <span
+              className="sr-only"
+            >
+              Toggle navigation
+            </span>
+            <span
+              className="icon-bar"
+            />
+            <span
+              className="icon-bar"
+            />
+            <span
+              className="icon-bar"
+            />
+          </button>
+        </div>
+        <div
+          aria-expanded={null}
+          className="navbar-collapse collapse"
+        >
+          <ul
+            className="nav navbar-nav"
+            role={null}
+          >
+            <li
+              className="active"
+              role="presentation"
+              style={undefined}
+            >
+              <a
+                href="/"
+                onClick={[Function]}
+                onKeyDown={[Function]}
+              >
+                Home
+              </a>
+            </li>
+            <li
+              className=""
+              role="presentation"
+              style={undefined}
+            >
+              <a
+                href="/howitworks"
+                onClick={[Function]}
+                onKeyDown={[Function]}
+              >
+                How it Works
+              </a>
+            </li>
+            <li
+              className=""
+              role="presentation"
+              style={undefined}
+            >
+              <a
+                href="/help"
+                onClick={[Function]}
+                onKeyDown={[Function]}
+              >
+                Help
+              </a>
+            </li>
+            <li
+              className=""
+              role="presentation"
+              style={undefined}
+            >
+              <a
+                href="#"
+                onClick={[Function]}
+                onKeyDown={[Function]}
+                role="button"
+              >
+                login
+              </a>
+            </li>
+            <li
+              className=""
+              role="presentation"
+              style={undefined}
+            >
+              <a
+                href="#"
+                onClick={[Function]}
+                onKeyDown={[Function]}
+                role="button"
+              >
+                register
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <div
+    className="row"
+  >
+    <div
+      className="banner "
+    >
+      <div
+        className="register col-md-4 col-xs-12"
+      >
+        <div
+          className="headings"
+        >
+          <h2
+            style={
+              Object {
+                "fontSize": "1.8em",
+                "marginBottom": undefined,
+              }
+            }
+          >
+            Chef Cooked, Healthy Meal Delivered to you.
+          </h2>
+          
+          <p />
+        </div>
+        <input
+          name="email"
+          placeholder="Your Email Address"
+          type="text"
+        />
+        <button>
+          GET STARTED
+        </button>
+        <p>
+          Already have an account? 
+          <a
+            onClick={[Function]}
+          >
+            Login Here
+          </a>
+          <br />
+          By continuing, you are agreeing to our 
+          <a>
+            terms and condition
+          </a>
+        </p>
+      </div>
+    </div>
+    <div
+      className="section col-xs-12"
+    >
+      <div
+        className="headings"
+      >
+        <h2
+          style={
+            Object {
+              "fontSize": "1.8em",
+              "marginBottom": "2em",
+            }
+          }
+        >
+          How It Works
+        </h2>
+        
+        <p />
+      </div>
+      <div
+        className="row"
+      >
+        <div
+          className="category col-md-4 col-xs-12"
+        >
+          <span
+            className="fa fa-spoon"
+            style={
+              Object {
+                "fontSize": "1.2em",
+              }
+            }
+          />
+          <div
+            className="headings"
+          >
+            <h3
+              style={
+                Object {
+                  "fontSize": "1.2em",
+                  "marginBottom": undefined,
+                }
+              }
+            >
+              You Choose A Meal Plan
+            </h3>
+            
+            <p />
+          </div>
+          Simple Text to briefly explain what this category is meant to do, this paragraph should not be more than 25 words.
+        </div>
+      </div>
+      <div
+        className="row"
+      >
+        <div
+          className="category col-md-4 col-xs-12"
+        >
+          <span
+            className="fa fa-fire"
+            style={
+              Object {
+                "fontSize": "1.2em",
+              }
+            }
+          />
+          <div
+            className="headings"
+          >
+            <h3
+              style={
+                Object {
+                  "fontSize": "1.2em",
+                  "marginBottom": undefined,
+                }
+              }
+            >
+              Our Chef Cooks the Meal
+            </h3>
+            
+            <p />
+          </div>
+          Simple Text to briefly explain what this category is meant to do, this paragraph should not be more than 25 words.
+        </div>
+      </div>
+      <div
+        className="row"
+      >
+        <div
+          className="category col-md-4 col-xs-12"
+        >
+          <span
+            className="fa fa-truck"
+            style={
+              Object {
+                "fontSize": "1.2em",
+              }
+            }
+          />
+          <div
+            className="headings"
+          >
+            <h3
+              style={
+                Object {
+                  "fontSize": "1.2em",
+                  "marginBottom": undefined,
+                }
+              }
+            >
+              Meal Delivered, You Enjoy 
+            </h3>
+            
+            <p />
+          </div>
+          Simple Text to briefly explain what this category is meant to do, this paragraph should not be more than 25 words.
+        </div>
+      </div>
+    </div>
+    <div
+      className="section mealPlan row"
+    >
+      <div
+        className="details col-xs-12"
+      >
+        <div
+          className="headings"
+        >
+          <h2
+            style={
+              Object {
+                "fontSize": "1.8em",
+                "marginBottom": "2em",
+              }
+            }
+          >
+            Our Awesome Meal Plans
+          </h2>
+          
+          <p />
+        </div>
+        <p>
+          Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue eu vulpu magna erat. Aliquam erat volutpat. Nam dui mi tincidunt quis accumsan porttitor facilisis luctus, metus lorem feugiat tempus adipiscing.
+        </p>
+        <ul>
+          <li
+            className="active"
+          >
+            3 Meals
+          </li>
+          <li>
+            5 Meals
+          </li>
+          <li>
+            20 Meals
+          </li>
+        </ul>
+      </div>
+      <div
+        className=""
+      >
+        <div
+          className="tabbedContent row"
+        >
+          Nam dui mi tincidunt quis  accumsan porttitor facilisis luctus, metus lorem feugiat tempus adipiscing. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue eu vulpu magna erat. Aliquam erat volutpat.
+        </div>
+      </div>
+    </div>
+    <div
+      className="section ourchef col-xs-12"
+    >
+      <div
+        className="headings"
+      >
+        <h2
+          style={
+            Object {
+              "fontSize": "1.8em",
+              "marginBottom": "2em",
+            }
+          }
+        >
+          Our Chefs Cooks every meal
+        </h2>
+        
+        <p />
+      </div>
+    </div>
+    <div
+      className="section col-xs-12"
+    >
+      <div
+        className="headings"
+      >
+        <h2
+          style={
+            Object {
+              "fontSize": "1.8em",
+              "marginBottom": "2em",
+            }
+          }
+        >
+          What People are saying
+        </h2>
+        
+        <p />
+      </div>
+      <div
+        className="comment col-md-3 col-sm-6 col-xs-12"
+      >
+        <div>
+          <span
+            className="fa fa-star"
+            style={
+              Object {
+                "fontSize": "1.2em",
+              }
+            }
+          />
+          <span
+            className="fa fa-star"
+            style={
+              Object {
+                "fontSize": "1.2em",
+              }
+            }
+          />
+          <span
+            className="fa fa-star"
+            style={
+              Object {
+                "fontSize": "1.2em",
+              }
+            }
+          />
+          <span
+            className="fa fa-star"
+            style={
+              Object {
+                "fontSize": "1.2em",
+              }
+            }
+          />
+          <span
+            className="fa fa-star"
+            style={
+              Object {
+                "fontSize": "1.2em",
+              }
+            }
+          />
+           
+        </div>
+        <div
+          className="headings"
+        >
+          <h3
+            style={
+              Object {
+                "fontSize": "1.2em",
+                "marginBottom": undefined,
+              }
+            }
+          >
+            Comment that changed Lives
+          </h3>
+          
+          <p />
+        </div>
+        <span>
+          Some lovely comment about how the food has changed their lives, how it help save money, how it's an healthy choice and how good the meals tastes.
+        </span>
+        <span
+          className="commenter"
+        >
+          olushola Adedokun
+        </span>
+      </div>
+    </div>
+  </div>
+  <div
+    className="section footer row"
+  >
+    <div
+      className="col-xs-12"
+    >
+      <div
+        className="headings"
+      >
+        <h3
+          style={
+            Object {
+              "fontSize": "1.2em",
+              "marginBottom": "1em",
+            }
+          }
+        >
+          Fresh, Healthy, Affordable, Convinient Meal
+        </h3>
+        
+        <p />
+      </div>
+      <p>
+        Cool Stuffs to say about our business model and why customers should subscribe to our services and follow our us on social media.
+      </p>
+      <span
+        className="fa fa-facebook"
+        style={
+          Object {
+            "fontSize": "1.2em",
+          }
+        }
+      />
+      <span
+        className="fa fa-twitter"
+        style={
+          Object {
+            "fontSize": "1.2em",
+          }
+        }
+      />
+      <span
+        className="fa fa-instagram"
+        style={
+          Object {
+            "fontSize": "1.2em",
+          }
+        }
+      />
+    </div>
+    <div
+      className="hrule col-xs-12"
+    />
+    <div
+      className="col-xs-12"
+    >
+      <div
+        className="headings"
+      >
+        <h3
+          style={
+            Object {
+              "fontSize": "1.2em",
+              "marginBottom": "1em",
+            }
+          }
+        >
+          About
+        </h3>
+        
+        <p />
+      </div>
+      <ul>
+        <li>
+          <a>
+            How it Works
+          </a>
+        </li>
+        <li>
+          <a>
+            Our Mission
+          </a>
+        </li>
+        <li>
+          <a>
+            Why MOM
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div
+      className="hrule col-xs-12"
+    />
+    <div
+      className="col-xs-12"
+    >
+      <div
+        className="headings"
+      >
+        <h3
+          style={
+            Object {
+              "fontSize": "1.2em",
+              "marginBottom": "1em",
+            }
+          }
+        >
+          Account
+        </h3>
+        
+        <p />
+      </div>
+      <ul>
+        <li>
+          <a>
+            Sign Up
+          </a>
+        </li>
+        <li>
+          <a>
+            Your Account
+          </a>
+        </li>
+        <li>
+          <a>
+            Login
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div
+      className="hrule col-xs-12"
+    />
+    <div
+      className="col-xs-12"
+    >
+      <div
+        className="headings"
+      >
+        <h3
+          style={
+            Object {
+              "fontSize": "1.2em",
+              "marginBottom": "1em",
+            }
+          }
+        >
+          Contact Us
+        </h3>
+        
+        <p />
+      </div>
+      <p>
+        Write compelling statement to make people contact us immediately using the channels we are have provided below.
+      </p>
+      <div
+        className="headings"
+      >
+        <h1
+          style={
+            Object {
+              "fontSize": "2.5em",
+              "marginBottom": "1.5em",
+            }
+          }
+        >
+          0818-801-9666
+        </h1>
+        
+        <p />
+      </div>
+    </div>
+    <div
+      className="copyright col-xs-12"
+    >
+      © MyOnlineMeals Limited.
+    </div>
+  </div>
+</div>
+`;

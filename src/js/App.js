@@ -15,7 +15,7 @@ import Login from './components/auth/loginUser';
 import Register from './components/auth/register';
 import {modalStatus} from './actions/userActions'
 import { connect } from 'react-redux';
-class App extends Component {
+export class App extends Component {
     handleCloseModal (route) {
         // if(route) this.props.history.push(route)
         this.props.modalStatus(false, '')

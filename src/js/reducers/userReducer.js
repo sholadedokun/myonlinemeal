@@ -6,7 +6,7 @@ import {
   SWITCH_MODAL_STATE
 } from '../actions/actionTypes';
 
-export default function(state = {}, action) {
+export default function(state = {error:'', authenticated:'', isOpen:'', page:''}, action) {
   switch(action.type) {
     case AUTH_USER:
       return { ...state, error: '', authenticated: true };
