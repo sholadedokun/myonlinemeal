@@ -97,6 +97,7 @@ exports[`>>>APP --- Snapshot +++capturing Snapshot of APP 1`] = `
             >
               <a
                 href="#"
+                id="login"
                 onClick={[Function]}
                 onKeyDown={[Function]}
                 role="button"
@@ -111,6 +112,7 @@ exports[`>>>APP --- Snapshot +++capturing Snapshot of APP 1`] = `
             >
               <a
                 href="#"
+                id="register"
                 onClick={[Function]}
                 onKeyDown={[Function]}
                 role="button"

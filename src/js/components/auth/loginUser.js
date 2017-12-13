@@ -21,7 +21,7 @@ class LoginUser extends Component {
     render(){
         const {username, password} = this.state;
         return(
-            <Row>
+            <Row className="loginModal">
                 <Heading size="lg">Login User</Heading>
                 <input type="text" value={username} onChange={(e)=>this.setState({username:e.target.value})} />
                 <input type ="password" value={password} onChange={(e)=>this.setState({password:e.target.value})} />

@@ -6,8 +6,8 @@ import {modalStatus} from '../actions/userActions'
 class Register extends Component {
     render(){
         return(
-            <Col xs="12" md="4" className="register">
-                <Heading size ="md" title="Chef Cooked, Healthy Meal Delivered to you."/>
+            <Col xs={12}  sm={4} smOffset={7} className="register">
+                <Heading size="md" title="Chef Cooked, Healthy Meal Delivered to you."/>
                 <input type="text" name="email" placeholder="Your Email Address" />
                 <button>GET STARTED</button>
                 <p>

@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { signoutUser, modalStatus} from '../actions/userActions';
 
-class Header extends Component {
+export class Header extends Component {
 
     signoutUser(){
         this.props.signoutUser().then((data)=>{
@@ -18,12 +18,12 @@ class Header extends Component {
         let resolvedLinks = (this.props.authenticated)?
             [
 
-                <NavItem href="/dashboard">dashboard</NavItem>,
-                <NavItem onClick={this.signoutUser.bind(this)}>logout</NavItem>,
+                <NavItem key={0} id="dashboard" href="/dashboard">dashboard</NavItem>,
+                <NavItem key={1}   id="logout" onClick={this.signoutUser.bind(this)}>logout</NavItem>,
             ]:
             [
-                <NavItem  onClick={()=>modalStatus(true, 'login')}>login</NavItem>,
-                <NavItem  onClick={()=>modalStatus(true, 'register')}>register</NavItem>
+                <NavItem key={1}  id="login" onClick={()=>modalStatus(true, 'login')}>login</NavItem>,
+                <NavItem  key={2} id="register"  onClick={()=>modalStatus(true, 'register')}>register</NavItem>
             ]
             return resolvedLinks
     }
