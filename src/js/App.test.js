@@ -19,8 +19,6 @@ const initialState = {user:{error:'', authenticated:'', isOpen:false, page:'logi
        // wrapper = mount( <Provider store={store}><App /></App> )
    })
 
-
-
 // Snapshot for APP React Component
 
 describe('>>>APP --- Snapshot',()=>{
@@ -46,9 +44,7 @@ describe('>>>APP --- Shallow Render REACT COMPONENTS',()=>{
     });
     it('+++ Loads the Modal When Login is clicked', () => {
         let header=wrapper.find('Header')
-        console.log(header.find('NavItem#login').debug())
         wrapper.find('NavItem#login').simulate('click');
-        console.log(wrapper.debug())
        expect(wrapper.find('.loginModal').length).toEqual(1)
        expect(wrapper.find('Footer').length).toEqual(1)
     });

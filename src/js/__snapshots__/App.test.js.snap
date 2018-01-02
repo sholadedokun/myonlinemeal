@@ -132,7 +132,7 @@ exports[`>>>APP --- Snapshot +++capturing Snapshot of APP 1`] = `
       className="banner "
     >
       <div
-        className="register col-md-4 col-xs-12"
+        className="register col-sm-4 col-sm-offset-7 col-xs-12"
       >
         <div
           className="headings"
@@ -193,10 +193,10 @@ exports[`>>>APP --- Snapshot +++capturing Snapshot of APP 1`] = `
         <p />
       </div>
       <div
-        className="row"
+        className="col-xs-12"
       >
         <div
-          className="category col-md-4 col-xs-12"
+          className="category col-md-4 col-sm-6 col-xs-12"
         >
           <span
             className="fa fa-spoon"
@@ -224,12 +224,8 @@ exports[`>>>APP --- Snapshot +++capturing Snapshot of APP 1`] = `
           </div>
           Simple Text to briefly explain what this category is meant to do, this paragraph should not be more than 25 words.
         </div>
-      </div>
-      <div
-        className="row"
-      >
         <div
-          className="category col-md-4 col-xs-12"
+          className="category col-md-4 col-sm-6 col-xs-12"
         >
           <span
             className="fa fa-fire"
@@ -257,12 +253,8 @@ exports[`>>>APP --- Snapshot +++capturing Snapshot of APP 1`] = `
           </div>
           Simple Text to briefly explain what this category is meant to do, this paragraph should not be more than 25 words.
         </div>
-      </div>
-      <div
-        className="row"
-      >
         <div
-          className="category col-md-4 col-xs-12"
+          className="category col-md-4 col-sm-6 col-xs-12"
         >
           <span
             className="fa fa-truck"
@@ -305,7 +297,7 @@ exports[`>>>APP --- Snapshot +++capturing Snapshot of APP 1`] = `
             style={
               Object {
                 "fontSize": "1.8em",
-                "marginBottom": "2em",
+                "marginBottom": "1em",
               }
             }
           >
@@ -317,19 +309,23 @@ exports[`>>>APP --- Snapshot +++capturing Snapshot of APP 1`] = `
         <p>
           Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue eu vulpu magna erat. Aliquam erat volutpat. Nam dui mi tincidunt quis accumsan porttitor facilisis luctus, metus lorem feugiat tempus adipiscing.
         </p>
-        <ul>
-          <li
-            className="active"
-          >
-            3 Meals
-          </li>
-          <li>
-            5 Meals
-          </li>
-          <li>
-            20 Meals
-          </li>
-        </ul>
+        <div
+          className="col-xs-12"
+        >
+          <ul>
+            <li
+              className="active"
+            >
+              3 Meals
+            </li>
+            <li>
+              5 Meals
+            </li>
+            <li>
+              20 Meals
+            </li>
+          </ul>
+        </div>
       </div>
       <div
         className=""
@@ -381,75 +377,221 @@ exports[`>>>APP --- Snapshot +++capturing Snapshot of APP 1`] = `
         <p />
       </div>
       <div
-        className="comment col-md-3 col-sm-6 col-xs-12"
+        className="col-xs-12"
       >
-        <div>
-          <span
-            className="fa fa-star"
-            style={
-              Object {
-                "fontSize": "1.2em",
+        <div
+          className="comment col-md-4 col-sm-6 col-xs-12"
+        >
+          <div>
+            <span
+              className="fa fa-star"
+              style={
+                Object {
+                  "fontSize": "1.2em",
+                }
               }
-            }
-          />
-          <span
-            className="fa fa-star"
-            style={
-              Object {
-                "fontSize": "1.2em",
+            />
+            <span
+              className="fa fa-star"
+              style={
+                Object {
+                  "fontSize": "1.2em",
+                }
               }
-            }
-          />
-          <span
-            className="fa fa-star"
-            style={
-              Object {
-                "fontSize": "1.2em",
+            />
+            <span
+              className="fa fa-star"
+              style={
+                Object {
+                  "fontSize": "1.2em",
+                }
               }
-            }
-          />
-          <span
-            className="fa fa-star"
-            style={
-              Object {
-                "fontSize": "1.2em",
+            />
+            <span
+              className="fa fa-star"
+              style={
+                Object {
+                  "fontSize": "1.2em",
+                }
               }
-            }
-          />
-          <span
-            className="fa fa-star"
-            style={
-              Object {
-                "fontSize": "1.2em",
+            />
+            <span
+              className="fa fa-star"
+              style={
+                Object {
+                  "fontSize": "1.2em",
+                }
               }
-            }
-          />
-           
+            />
+             
+          </div>
+          <div
+            className="headings"
+          >
+            <h3
+              style={
+                Object {
+                  "fontSize": "1.2em",
+                  "marginBottom": undefined,
+                }
+              }
+            >
+              Comment that changed Lives
+            </h3>
+            
+            <p />
+          </div>
+          <span>
+            Some lovely comment about how the food has changed their lives, how it help save money, how it's an healthy choice and how good the meals tastes.
+          </span>
+          <span
+            className="commenter"
+          >
+            olushola Adedokun
+          </span>
         </div>
         <div
-          className="headings"
+          className="comment col-md-4 col-sm-6 col-xs-12"
         >
-          <h3
-            style={
-              Object {
-                "fontSize": "1.2em",
-                "marginBottom": undefined,
+          <div>
+            <span
+              className="fa fa-star"
+              style={
+                Object {
+                  "fontSize": "1.2em",
+                }
               }
-            }
+            />
+            <span
+              className="fa fa-star"
+              style={
+                Object {
+                  "fontSize": "1.2em",
+                }
+              }
+            />
+            <span
+              className="fa fa-star"
+              style={
+                Object {
+                  "fontSize": "1.2em",
+                }
+              }
+            />
+            <span
+              className="fa fa-star"
+              style={
+                Object {
+                  "fontSize": "1.2em",
+                }
+              }
+            />
+            <span
+              className="fa fa-star-o"
+              style={
+                Object {
+                  "fontSize": "1.2em",
+                }
+              }
+            />
+             
+          </div>
+          <div
+            className="headings"
           >
-            Comment that changed Lives
-          </h3>
-          
-          <p />
+            <h3
+              style={
+                Object {
+                  "fontSize": "1.2em",
+                  "marginBottom": undefined,
+                }
+              }
+            >
+              Another Comment that changed Lives
+            </h3>
+            
+            <p />
+          </div>
+          <span>
+            So we've got another awesome comment about our services how it's an healthy choice and how good the meals tastes.
+          </span>
+          <span
+            className="commenter"
+          >
+            Moses Oladele
+          </span>
         </div>
-        <span>
-          Some lovely comment about how the food has changed their lives, how it help save money, how it's an healthy choice and how good the meals tastes.
-        </span>
-        <span
-          className="commenter"
+        <div
+          className="comment col-md-4 col-sm-6 col-xs-12"
         >
-          olushola Adedokun
-        </span>
+          <div>
+            <span
+              className="fa fa-star"
+              style={
+                Object {
+                  "fontSize": "1.2em",
+                }
+              }
+            />
+            <span
+              className="fa fa-star"
+              style={
+                Object {
+                  "fontSize": "1.2em",
+                }
+              }
+            />
+            <span
+              className="fa fa-star"
+              style={
+                Object {
+                  "fontSize": "1.2em",
+                }
+              }
+            />
+            <span
+              className="fa fa-star"
+              style={
+                Object {
+                  "fontSize": "1.2em",
+                }
+              }
+            />
+            <span
+              className="fa fa-star-o"
+              style={
+                Object {
+                  "fontSize": "1.2em",
+                }
+              }
+            />
+             
+          </div>
+          <div
+            className="headings"
+          >
+            <h3
+              style={
+                Object {
+                  "fontSize": "1.2em",
+                  "marginBottom": undefined,
+                }
+              }
+            >
+              Jusr Comments that are lovely
+            </h3>
+            
+            <p />
+          </div>
+          <span>
+            We don't care about anything other than a very good comment healthy choice and how good the meals tastes.
+          </span>
+          <span
+            className="commenter"
+          >
+            Uche Obi
+          </span>
+        </div>
       </div>
     </div>
   </div>
@@ -460,175 +602,179 @@ exports[`>>>APP --- Snapshot +++capturing Snapshot of APP 1`] = `
       className="col-xs-12"
     >
       <div
-        className="headings"
+        className="col-sm-4 col-xs-12"
       >
-        <h3
+        <div
+          className="headings"
+        >
+          <h3
+            style={
+              Object {
+                "fontSize": "1.2em",
+                "marginBottom": "1em",
+              }
+            }
+          >
+            Fresh, Healthy, Affordable, Convinient Meal
+          </h3>
+          
+          <p />
+        </div>
+        <p>
+          Cool Stuffs to say about our business model and why customers should subscribe to our services and follow our us on social media.
+        </p>
+        <span
+          className="fa fa-facebook"
           style={
             Object {
               "fontSize": "1.2em",
-              "marginBottom": "1em",
             }
           }
-        >
-          Fresh, Healthy, Affordable, Convinient Meal
-        </h3>
-        
-        <p />
-      </div>
-      <p>
-        Cool Stuffs to say about our business model and why customers should subscribe to our services and follow our us on social media.
-      </p>
-      <span
-        className="fa fa-facebook"
-        style={
-          Object {
-            "fontSize": "1.2em",
+        />
+        <span
+          className="fa fa-twitter"
+          style={
+            Object {
+              "fontSize": "1.2em",
+            }
           }
-        }
+        />
+        <span
+          className="fa fa-instagram"
+          style={
+            Object {
+              "fontSize": "1.2em",
+            }
+          }
+        />
+      </div>
+      <div
+        className="hrule hidden-lg hidden-sm col-xs-12"
       />
-      <span
-        className="fa fa-twitter"
-        style={
-          Object {
-            "fontSize": "1.2em",
-          }
-        }
+      <div
+        className="col-sm-1 col-xs-12"
+      >
+        <div
+          className="headings"
+        >
+          <h3
+            style={
+              Object {
+                "fontSize": "1.2em",
+                "marginBottom": "1em",
+              }
+            }
+          >
+            About
+          </h3>
+          
+          <p />
+        </div>
+        <ul>
+          <li>
+            <a>
+              How it Works
+            </a>
+          </li>
+          <li>
+            <a>
+              Our Mission
+            </a>
+          </li>
+          <li>
+            <a>
+              Why MOM
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div
+        className="hrule hidden-lg hidden-sm col-xs-12"
       />
-      <span
-        className="fa fa-instagram"
-        style={
-          Object {
-            "fontSize": "1.2em",
-          }
-        }
+      <div
+        className="col-sm-1 col-xs-12"
+      >
+        <div
+          className="headings"
+        >
+          <h3
+            style={
+              Object {
+                "fontSize": "1.2em",
+                "marginBottom": "1em",
+              }
+            }
+          >
+            Account
+          </h3>
+          
+          <p />
+        </div>
+        <ul>
+          <li>
+            <a>
+              Sign Up
+            </a>
+          </li>
+          <li>
+            <a>
+              Your Account
+            </a>
+          </li>
+          <li>
+            <a>
+              Login
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div
+        className="hrule hidden-lg hidden-sm col-xs-12"
       />
-    </div>
-    <div
-      className="hrule col-xs-12"
-    />
-    <div
-      className="col-xs-12"
-    >
       <div
-        className="headings"
+        className="col-sm-4 col-sm-offset-1 col-xs-12"
       >
-        <h3
-          style={
-            Object {
-              "fontSize": "1.2em",
-              "marginBottom": "1em",
-            }
-          }
+        <div
+          className="headings"
         >
-          About
-        </h3>
-        
-        <p />
+          <h3
+            style={
+              Object {
+                "fontSize": "1.2em",
+                "marginBottom": "1em",
+              }
+            }
+          >
+            Contact Us
+          </h3>
+          
+          <p />
+        </div>
+        <p>
+          Write compelling statement to make people contact us immediately using the channels we are have provided below.
+        </p>
+        <div
+          className="headings"
+        >
+          <h1
+            style={
+              Object {
+                "fontSize": "2.5em",
+                "marginBottom": "1.5em",
+              }
+            }
+          >
+            0818-801-9666
+          </h1>
+          
+          <p />
+        </div>
       </div>
-      <ul>
-        <li>
-          <a>
-            How it Works
-          </a>
-        </li>
-        <li>
-          <a>
-            Our Mission
-          </a>
-        </li>
-        <li>
-          <a>
-            Why MOM
-          </a>
-        </li>
-      </ul>
-    </div>
-    <div
-      className="hrule col-xs-12"
-    />
-    <div
-      className="col-xs-12"
-    >
       <div
-        className="headings"
+        className="copyright col-xs-12"
       >
-        <h3
-          style={
-            Object {
-              "fontSize": "1.2em",
-              "marginBottom": "1em",
-            }
-          }
-        >
-          Account
-        </h3>
-        
-        <p />
+        © MyOnlineMeals Limited.
       </div>
-      <ul>
-        <li>
-          <a>
-            Sign Up
-          </a>
-        </li>
-        <li>
-          <a>
-            Your Account
-          </a>
-        </li>
-        <li>
-          <a>
-            Login
-          </a>
-        </li>
-      </ul>
-    </div>
-    <div
-      className="hrule col-xs-12"
-    />
-    <div
-      className="col-xs-12"
-    >
-      <div
-        className="headings"
-      >
-        <h3
-          style={
-            Object {
-              "fontSize": "1.2em",
-              "marginBottom": "1em",
-            }
-          }
-        >
-          Contact Us
-        </h3>
-        
-        <p />
-      </div>
-      <p>
-        Write compelling statement to make people contact us immediately using the channels we are have provided below.
-      </p>
-      <div
-        className="headings"
-      >
-        <h1
-          style={
-            Object {
-              "fontSize": "2.5em",
-              "marginBottom": "1.5em",
-            }
-          }
-        >
-          0818-801-9666
-        </h1>
-        
-        <p />
-      </div>
-    </div>
-    <div
-      className="copyright col-xs-12"
-    >
-      © MyOnlineMeals Limited.
     </div>
   </div>
 </div>

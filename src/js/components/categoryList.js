@@ -1,13 +1,22 @@
 import React from 'react';
 import {Row, Col} from 'react-bootstrap';
 import Heading from './heading';
+import CategoryList from  './categoryList'
 import Icon from './icon'
-const Category =(props)=>
-        <Col xs="12" sm="4" className="category">
-            {
-                props.icon?<Icon icon={props.icon} />:''
-            }
-            <Heading title={props.title} size="sm" />
-            {props.children}
-        </Col>
+class Category extends(React.Component){
+    render(){
+        return(
+            <Col xs={this.props.xs} sm={this.props.sm} md={this.props.md} className="category">
+                {
+                    this.props.icon?<Icon icon={this.props.icon} />:
+                        this.props.image?<img src={this.props.image} width="100%" />:
+                            this.props.number? <span className="icon_number">{this.props.number}</span>:''
+                }
+                <Heading title={this.props.title} size="sm" />
+                {this.props.children}
+            </Col>
+        )
+    }
+}
+
 export default Category
