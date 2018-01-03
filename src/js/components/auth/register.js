@@ -19,10 +19,9 @@ class RegisterUser extends Component {
     }
     registerUser(){
 
-        let params= _.omit(this.state, ['firstName', 'lastName'])
-        params.name=`${this.state.firstName} ${this.state.lastName}`;
+        let params= _.omit(this.state, ['password_confirmation'])
         this.props.signUpUser(params).then((data)=>{
-            this.props.close('/profile')
+            this.props.close('/dashboard')
         })
 
     }

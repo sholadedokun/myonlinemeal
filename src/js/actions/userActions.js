@@ -8,13 +8,13 @@ import {
   SWITCH_MODAL_STATE
 } from './actionTypes';
 
-const ROOT_URL = 'http://thecandleapi.herokuapp.com/api';
+const ROOT_URL = 'http://localhost:3000/appActions';
 
 export function signinUser( username, password ) {
   return function(dispatch) {
     return new Promise( (resolve)=>{
         // Submit email/password to the server
-        axios.post(`${ROOT_URL}/auth/login`, { username, password })
+        axios.post(`${ROOT_URL}/signin`, { username, password })
             .then(response => {
                 // If request is good...
                 // - Update state to indicate user is authenticated
@@ -35,7 +35,7 @@ export function signinUser( username, password ) {
 export function signUpUser(values) {
     return function(dispatch) {
         return new Promise( (resolve)=>{
-            axios.post(`${ROOT_URL}/auth/register`, values)
+            axios.post(`${ROOT_URL}/signup`, values)
             .then(response => {
 
                 dispatch({ type: AUTH_USER });
@@ -66,7 +66,12 @@ export function authError(error) {
 
 export function signoutUser() {
   localStorage.removeItem('MyOnlineMealToken');
-  return { type: UNAUTH_USER };
+  return function(dispatch) {
+      return new Promise( (resolve)=>{
+          dispatch({ type: UNAUTH_USER }) ;
+          resolve()
+      })
+  }
 }
 
 export function fetchProduct() {

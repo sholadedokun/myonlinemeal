@@ -14,7 +14,7 @@ class LoginUser extends Component {
     }
     loginUser(){
         this.props.signinUser(this.state.username, this.state.password).then((data)=>{
-            this.props.close('/profile')
+            this.props.close('/dashboard')
         })
 
     }
