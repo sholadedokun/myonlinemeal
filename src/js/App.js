@@ -11,8 +11,12 @@ import Whymom from './components/whymom'
 import Help from './components/help'
 import requireAuth from './components/auth/require_auth';
 import { connect } from 'react-redux';
+import { getAllPlans } from './actions/planActions'
 export class App extends Component {
-
+    componentWillMount(){
+        this.props.getAllPlans().then(data=>{
+        })
+    }
     render() {
         return (
             <Router>
@@ -31,4 +35,4 @@ export class App extends Component {
     }
 }
 
-export default App;
+export default connect(null, {getAllPlans})(App);

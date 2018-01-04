@@ -5,10 +5,11 @@ import {
   UNAUTH_USER,
   AUTH_ERROR,
   FETCH_OFFERS,
-  SWITCH_MODAL_STATE
+  SWITCH_MODAL_STATE,
+  FETCH_PLANS,
+  ROOT_URL
 } from './actionTypes';
 
-const ROOT_URL = 'http://localhost:3000/appActions';
 
 export function signinUser( username, password ) {
   return function(dispatch) {
@@ -41,6 +42,21 @@ export function signUpUser(values) {
                 dispatch({ type: AUTH_USER });
                 localStorage.setItem('MyOnlineMealToken', response.data.token);
                 resolve (response)
+            })
+            .catch(error => {
+                let errorData= error.response.data.error
+                dispatch(authError(errorData));
+            });
+        })
+    }
+}
+export function getAllPlans() {
+    return function(dispatch) {
+        return new Promise( (resolve)=>{
+            axios.get(`${ROOT_URL}/plan`)
+            .then(response => {
+                dispatch({ type: FETCH_PLANS });
+
             })
             .catch(error => {
                 let errorData= error.response.data.error

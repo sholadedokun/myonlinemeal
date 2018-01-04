@@ -5,6 +5,7 @@ import { Link, withRouter } from 'react-router-dom';
 import Login from './auth/loginUser';
 import Register from './auth/register';
 import { connect } from 'react-redux';
+import Plans from './plans';
 import { signoutUser, modalStatus} from '../actions/userActions';
 
 export class Header extends Component {
@@ -42,7 +43,6 @@ export class Header extends Component {
 
     render(){
         const {modalOpen, modalLoad}=this.props;
-        console.log(this.props.history);
         return(
             <Row className="header">
                 <Navbar inverse collapseOnSelect>
@@ -70,7 +70,9 @@ export class Header extends Component {
                     {
                         (modalLoad==='login')?
                             <Login close={this.handleCloseModal.bind(this)} />:
-                            <Register close={this.handleCloseModal.bind(this)} />
+                                (modalLoad==='register')?
+                                <Register close={this.handleCloseModal.bind(this)} />:
+                                <Plans close={this.handleCloseModal.bind(this)} />
                     }
                 </ReactModal>
             </Row>
