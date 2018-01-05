@@ -15,16 +15,21 @@ class Dashboard extends Component{
             if(data==null){
                 this.props.modalStatus(true, 'plans')
             }
-
-
         })
     }
     render(){
-        const {Subscription}=this.props
+        const {Subscription, currentOrders}=this.props
         return(
             <Row className="dashboard">
                 <Col xs="12">
                     <Heading size="md" title="USERS Dashboards" marginBottom="2em"/>
+                        <Heading size="sm" title="Current Order" marginBottom="1em" />
+                        {
+                            currentOrders?
+                            _.map(currentOrders, (item, index)=>
+                                <Col xs="12" key={index}>{item.status}</Col>
+                            ):''
+                        }
                         <Heading size="sm" title="Subscription History" marginBottom="1em" />
                         <Col xs="12" className="historyHeading">
                             <Col xs="2">Status</Col>
@@ -52,7 +57,8 @@ class Dashboard extends Component{
 }
 function mapStateToProps(state){
     return{
-        Subscription:state.subScription.subScriptions
+        Subscription:state.subScription.subScriptions,
+        currentOrders:state.orders.allCurrentOrders
     }
 }
 export default connect(mapStateToProps, {getSubScription, modalStatus})(Dashboard)
