@@ -7,6 +7,7 @@ import {
   FETCH_OFFERS,
   SWITCH_MODAL_STATE,
   FETCH_PLANS,
+  FETCH_USER,
   ROOT_URL
 } from './actionTypes';
 
@@ -101,5 +102,21 @@ export function fetchProduct() {
                 payload: response.data
             });
         });
+    }
+}
+export function fetchUser() {
+    return function(dispatch) {
+        return new Promise( (resolve)=>{
+            axios.get(`${ROOT_URL}/userProfile`, {
+                headers: { authorization: localStorage.getItem('MyOnlineMealToken') }
+            })
+            .then(response => {
+                dispatch({
+                    type: FETCH_USER,
+                    payload: response.data
+                });
+                resolve()
+            });
+        })
     }
 }

@@ -3,7 +3,7 @@ import {Col, Row} from 'react-bootstrap';
 import Heading from './heading'
 import {getSubScription} from '../actions/subScriptionActions'
 import {connect} from 'react-redux'
-import {modalStatus} from '../actions/userActions'
+import {modalStatus, fetchUser} from '../actions/userActions'
 import _ from 'lodash'
 import moment from 'moment';
 class Dashboard extends Component{
@@ -11,10 +11,18 @@ class Dashboard extends Component{
         super();
     }
     componentWillMount(){
+        this.props.fetchUser().then(data=>{
+            let user = this.props.userDetails
+            if(user.defaultMeal=='' || !user.defaultMeal){
+                this.props.modalStatus(true, 'completeRegisteration');
+            }
+
+        })
         this.props.getSubScription().then(data =>{
             if(data==null){
                 this.props.modalStatus(true, 'plans')
             }
+
         })
     }
     render(){
@@ -58,7 +66,8 @@ class Dashboard extends Component{
 function mapStateToProps(state){
     return{
         Subscription:state.subScription.subScriptions,
-        currentOrders:state.orders.allCurrentOrders
+        currentOrders:state.orders.allCurrentOrders,
+        userDetails:state.user.userDetails
     }
 }
-export default connect(mapStateToProps, {getSubScription, modalStatus})(Dashboard)
+export default connect(mapStateToProps, {getSubScription, modalStatus, fetchUser})(Dashboard)

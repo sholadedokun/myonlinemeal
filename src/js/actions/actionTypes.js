@@ -17,6 +17,7 @@ export const FAIL_TO_CONNECT = "fail_to_connect";
 
 //USER actions
 export const AUTH_USER = 'auth_user';
+export const FETCH_USER = 'FETCH_USER';
 export const UNAUTH_USER = 'unauth_user';
 export const AUTH_ERROR = 'auth_error';
 export const FETCH_OFFERS = 'fetch_offers';
@@ -28,7 +29,8 @@ export const PLAN_ERROR ='PLAN_ERROR';
 
 //ORDER actions
 export const ORDER_ERROR = 'ORDER_ERROR';
-export const FETCH_CURRENT_ORDERS = 'FETCH_CURRENT_ORDERS'
+export const FETCH_CURRENT_ORDERS = 'FETCH_CURRENT_ORDERS';
+export const FETCH_MEAL_OPTIONS='FETCH_MEAL_OPIONS';
 
 //SUBSCRIPTION actions
 export const SUBSCRIPTION_ERROR ="SUBSCRIPTION_ERROR"

@@ -6,6 +6,8 @@ import Login from './auth/loginUser';
 import Register from './auth/register';
 import { connect } from 'react-redux';
 import Plans from './plans';
+import CompleteRegisteration from './completeRegisteration';
+import {getAllMealOptions} from '../actions/orderActions'
 import { signoutUser, modalStatus} from '../actions/userActions';
 
 export class Header extends Component {
@@ -17,7 +19,9 @@ export class Header extends Component {
         this.props.signoutUser().then((data)=>{
             this.props.history.push('/')
         })
-
+    }
+    componentWillMount(){
+        this.props.getAllMealOptions();
     }
     handleCloseModal (route) {
         if(route) this.props.history.push(route)
@@ -72,7 +76,9 @@ export class Header extends Component {
                             <Login close={this.handleCloseModal.bind(this)} />:
                                 (modalLoad==='register')?
                                 <Register close={this.handleCloseModal.bind(this)} />:
-                                <Plans close={this.handleCloseModal.bind(this)} />
+                                    (modalLoad==='plan')?
+                                    <Plans close={this.handleCloseModal.bind(this)} />:
+                                    <CompleteRegisteration  close={this.handleCloseModal.bind(this)} />
                     }
                 </ReactModal>
             </Row>
@@ -86,5 +92,5 @@ function mapStateToProps(state) {
       modalOpen:state.user.isOpen
   };
 }
-const mapDispatchToProps= {signoutUser, modalStatus}
+const mapDispatchToProps= {signoutUser, modalStatus, getAllMealOptions}
 export default connect(mapStateToProps, mapDispatchToProps)(withRouter(Header));
