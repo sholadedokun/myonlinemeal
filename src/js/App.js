@@ -4,7 +4,7 @@ import {BrowserRouter as Router,  Route } from 'react-router-dom';
 import {Grid, Row} from 'react-bootstrap'
 import Footer from './components/footer';
 import Home from './components/home'
-import Dashboard from './components/dashboard'
+import Dashboard from './components/account/home'
 import Howitworks from './components/howitworks'
 import Ourmission from './components/ourmission'
 import Whymom from './components/whymom'
