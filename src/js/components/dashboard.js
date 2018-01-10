@@ -13,8 +13,11 @@ class Dashboard extends Component{
     componentWillMount(){
         this.props.fetchUser().then(data=>{
             let user = this.props.userDetails
-            if(user.defaultMeal=='' || !user.defaultMeal){
-                this.props.modalStatus(true, 'completeRegisteration');
+            if(user.currentDeliveryAddress=='' || !user.currentDeliveryAddress){
+                this.props.modalStatus(true, 'completeRegisteration', 1);
+            }
+            else if(user.defaultMeal=='' || !user.defaultMeal){
+                this.props.modalStatus(true, 'completeRegisteration', 2);
             }
 
         })

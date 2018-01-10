@@ -46,7 +46,7 @@ export class Header extends Component {
     }
 
     render(){
-        const {modalOpen, modalLoad}=this.props;
+        const {modalOpen, modalLoad, modalOtherArguments}=this.props;
         return(
             <Row className="header">
                 <Navbar inverse collapseOnSelect>
@@ -78,7 +78,7 @@ export class Header extends Component {
                                 <Register close={this.handleCloseModal.bind(this)} />:
                                     (modalLoad==='plan')?
                                     <Plans close={this.handleCloseModal.bind(this)} />:
-                                    <CompleteRegisteration  close={this.handleCloseModal.bind(this)} />
+                                    <CompleteRegisteration  close={this.handleCloseModal.bind(this)} position={modalOtherArguments} />
                     }
                 </ReactModal>
             </Row>
@@ -89,7 +89,8 @@ function mapStateToProps(state) {
   return {
       authenticated: state.user.authenticated,
       modalLoad:state.user.page,
-      modalOpen:state.user.isOpen
+      modalOpen:state.user.isOpen,
+      modalOtherArguments: state.user.extraArgument
   };
 }
 const mapDispatchToProps= {signoutUser, modalStatus, getAllMealOptions}

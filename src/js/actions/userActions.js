@@ -5,6 +5,7 @@ import {
   UNAUTH_USER,
   AUTH_ERROR,
   FETCH_OFFERS,
+  UPDATE_USER,
   SWITCH_MODAL_STATE,
   FETCH_PLANS,
   FETCH_USER,
@@ -66,11 +67,11 @@ export function getAllPlans() {
         })
     }
 }
-export function modalStatus(state, page){
+export function modalStatus(state, page, extraArgument){
     return function(dispatch){
         dispatch({
             type: SWITCH_MODAL_STATE,
-            payload:{isOpen:state, page}
+            payload:{isOpen:state, page, extraArgument}
         });
     }
 }
@@ -113,6 +114,22 @@ export function fetchUser() {
             .then(response => {
                 dispatch({
                     type: FETCH_USER,
+                    payload: response.data
+                });
+                resolve()
+            });
+        })
+    }
+}
+export function saveDelivery(deliveryAddress) {
+    return function(dispatch) {
+        return new Promise( (resolve)=>{
+            axios.post(`${ROOT_URL}/deliveryAddress`, deliveryAddress, {
+                headers: { authorization: localStorage.getItem('MyOnlineMealToken') }
+            })
+            .then(response => {
+                dispatch({
+                    type: UPDATE_USER,
                     payload: response.data
                 });
                 resolve()

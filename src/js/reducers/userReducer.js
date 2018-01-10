@@ -18,7 +18,7 @@ export default function(state = {error:'', authenticated:'', isOpen:'', page:''}
     case FETCH_USER:
       return { ...state, userDetails: action.payload };
     case SWITCH_MODAL_STATE:
-        return {...state, isOpen:action.payload.isOpen, page:action.payload.page}
+        return {...state, isOpen:action.payload.isOpen, page:action.payload.page, extraArgument:action.payload.extraArgument}
   }
   return state;
 }

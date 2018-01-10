@@ -21,6 +21,7 @@ export const FETCH_USER = 'FETCH_USER';
 export const UNAUTH_USER = 'unauth_user';
 export const AUTH_ERROR = 'auth_error';
 export const FETCH_OFFERS = 'fetch_offers';
+export const UPDATE_USER= 'UPDATE_USER';
 export const SWITCH_MODAL_STATE= 'switch_modal_state';
 
 //PLAN actions
@@ -36,4 +37,5 @@ export const FETCH_MEAL_OPTIONS='FETCH_MEAL_OPIONS';
 export const SUBSCRIPTION_ERROR ="SUBSCRIPTION_ERROR"
 export const FETCH_SUBSCRIPTIONS ="FETCH_SUBSCRIPTIONS"
 export const SUBCRIBE_TO_PLAN = "SUBCRIBE_TO_PLAN"
+export const SET_DEFAULT_MEAL='SET_DEFAULT_MEAL'
 export const SUBCRIBE_TO_PLAN_ERROR = "SUBCRIBE_TO_PLAN_ERROR"

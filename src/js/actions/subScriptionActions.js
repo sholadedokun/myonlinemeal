@@ -4,6 +4,7 @@ import {
   SUBCRIBE_TO_PLAN,
   SUBCRIBE_TO_PLAN_ERROR,
   FETCH_SUBSCRIPTIONS,
+  SET_DEFAULT_MEAL,
   ROOT_URL
 } from './actionTypes';
 import {getCurrentOrder} from './orderActions'
@@ -41,6 +42,23 @@ export function subscribeToPlan(id) {
                 console.log(error, error.response)
                 // let errorData= response.data.error
                 // dispatch(planError(errorData));
+            });
+        })
+    }
+}
+export function setDefaultMeal(id){
+    return function(dispatch) {
+        return new Promise( (resolve)=>{
+            axios.put(`${ROOT_URL}/userProfile`, {defaultMeal:id}, {
+                headers: { authorization: localStorage.getItem('MyOnlineMealToken') }
+            })
+            .then(response => {
+                dispatch({ type: SET_DEFAULT_MEAL, payload:response.data });
+                resolve(response.data)
+
+            })
+            .catch(error => {
+                console.log(error, error.response)
             });
         })
     }

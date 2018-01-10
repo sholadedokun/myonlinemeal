@@ -3,7 +3,9 @@ import {connect} from 'react-redux';
 import {Row, Col} from 'react-bootstrap';
 import Heading from './heading';
 import _ from 'lodash'
-import PhoneAndDelivery from  './phoneAndDelivery'
+import Delivery from  './delivery'
+import {saveDelivery} from '../actions/userActions'
+import {setDefaultMeal} from '../actions/subScriptionActions'
 
 class CompleteRegisteration extends Component {
     constructor(props){
@@ -12,10 +14,9 @@ class CompleteRegisteration extends Component {
             defaultMeal:'',
             currentStep:1,
             totalStep:3,
-            phoneAndDelivery:{
-                phoneNumber:'',
+            delivery:{
                 street:'',
-                landmark:'',
+                landMark:'',
                 city:'Opebi',
                 state:'Lagos',
                 country:'Nigeria'
@@ -23,14 +24,23 @@ class CompleteRegisteration extends Component {
         }
     }
     next(step){
-
-        this.setState({currentStep: ++step})
+        switch (step){
+            case 1:
+                    return this.props.saveDelivery(this.state.delivery).then(data=>this.setState({currentStep: ++step}))
+            case 2:
+                return this.props.setDefaultMeal(this.state.defaultMeal).then(data=>this.setState({currentStep: ++step}))
+            default:
+                return
+        }
+    }
+    componentWillMount(){
+        this.setState({currentStep:this.props.position})
     }
     updatePhoneAndDeliver(key, value){
-        this.setState({phoneAndDelivery:{...this.state.phoneAndDelivery, [key]:value}})
+        this.setState({delivery:{...this.state.delivery, [key]:value}})
     }
     render(){
-        const {defaultMeal, currentStep, totalStep, phoneAndDelivery} = this.state;
+        const {defaultMeal, currentStep, totalStep, delivery} = this.state;
         const {allMeals} = this.props;
         return(
             <Row className="loginModal">
@@ -38,7 +48,7 @@ class CompleteRegisteration extends Component {
                 <Heading size="xs" title={`step ${currentStep} of ${totalStep}`} />
                 {
                     currentStep==1 ?
-                        <PhoneAndDelivery inputDetails={phoneAndDelivery} inputUpdate={this.updatePhoneAndDeliver.bind(this)} />
+                        <Delivery inputDetails={delivery} inputUpdate={this.updatePhoneAndDeliver.bind(this)} />
                         :
                         (currentStep==2)?
                                 <Col xs="12">
@@ -64,4 +74,4 @@ function mapStateToProps(state){
         {allMeals:state.orders.allMealOptions}
     )
 }
-export default connect(mapStateToProps)(CompleteRegisteration)
+export default connect(mapStateToProps, {saveDelivery, setDefaultMeal})(CompleteRegisteration)
