@@ -6,7 +6,7 @@ import Login from './auth/loginUser';
 import Register from './auth/register';
 import { connect } from 'react-redux';
 import Plans from './plans';
-import CompleteRegisteration from './completeRegisteration';
+import CompleteRegisteration from './account/completeRegisteration';
 import {getAllMealOptions} from '../actions/orderActions'
 import { signoutUser, modalStatus} from '../actions/userActions';
 

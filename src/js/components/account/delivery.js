@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {Row, Col} from 'react-bootstrap';
-import Heading from './heading'
+import Heading from '../heading'
 
 export default class AddPhoneAndDelivery extends Component{
     render(){

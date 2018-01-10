@@ -23,7 +23,7 @@ export class App extends Component {
                 <Grid fluid={true} className="App">
                     <Header className="App-header"></Header>
                     <Route  exact path="/"  component={Home} />
-                    <Route  exact path="/dashboard"   component={requireAuth(Dashboard)}  />
+                    <Route  path="/dashboard"   component={requireAuth(Dashboard)}  />
                     <Route  exact path="/Howitworks"  component={Howitworks} />
                     <Route  exact path="/ourmission"  component={Ourmission} />
                     <Route  exact path="/whymom"  component={Whymom} />

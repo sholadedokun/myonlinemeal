@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {Row, Col} from 'react-bootstrap';
-import Heading from './heading';
+import Heading from '../heading';
 import _ from 'lodash'
 import Delivery from  './delivery'
-import {saveDelivery} from '../actions/userActions'
-import {setDefaultMeal} from '../actions/subScriptionActions'
+import {saveDelivery} from '../../actions/userActions'
+import {setDefaultMeal} from '../../actions/subScriptionActions'
 
 class CompleteRegisteration extends Component {
     constructor(props){

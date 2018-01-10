@@ -6,7 +6,7 @@ import {connect} from 'react-redux';
 import {modalStatus, fetchUser} from '../../actions/userActions';
 import DashBoard from './dashboard';
 import Settings from './settings';
-import {BrowserRouter as Router,  Route } from 'react-router-dom';
+import {BrowserRouter as Router,  Route, Link } from 'react-router-dom';
 import _ from 'lodash'
 import moment from 'moment';
 class Home extends Component{
@@ -23,6 +23,7 @@ class Home extends Component{
         settings:{
             label:'Settings',
             name:'settings',
+            exact: true,
             icon:'gear',
             path: '/settings',
             component: Settings
@@ -53,14 +54,25 @@ class Home extends Component{
         const {Subscription, currentOrders, userDetails, match}=this.props
         return(
             <Router>
-                <Col componentClass="ul">
-                {
-                    _.map(this.menuList, (item, index)=>{
-                        return(
-                            <Route key={index+item.path} exact={item.exact} path={match.url+item.path} component={item.component} />
-                        )
-                    })
-                }
+                <Col xs="12">
+                    <Col componentClass="ul" xs="12" className="account header">
+                    {
+                        _.map(this.menuList, (item, index)=>{
+                            return(
+                                <li key={index}><Link to={match.url+item.path}>{item.label}</Link></li>
+                            )
+                        })
+                    }
+                    </Col>
+                    <Col componentClass="ul">
+                    {
+                        _.map(this.menuList, (item, index)=>{
+                            return(
+                                <Route key={index+item.path} exact={item.exact} path={match.url+item.path} component={item.component} />
+                            )
+                        })
+                    }
+                    </Col>
                 </Col>
             </Router>
         )
