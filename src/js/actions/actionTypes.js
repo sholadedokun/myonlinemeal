@@ -23,7 +23,7 @@ export const AUTH_ERROR = 'auth_error';
 export const FETCH_OFFERS = 'fetch_offers';
 export const UPDATE_USER= 'UPDATE_USER';
 export const SWITCH_MODAL_STATE= 'switch_modal_state';
-
+export const FETCH_SERVER_DATE ="FETCH_SERVER_DATE";
 //PLAN actions
 export const FETCH_PLANS ='FETCH_PLANS';
 export const PLAN_ERROR ='PLAN_ERROR';

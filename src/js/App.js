@@ -11,10 +11,12 @@ import Whymom from './components/whymom'
 import Help from './components/help'
 import requireAuth from './components/auth/require_auth';
 import { connect } from 'react-redux';
-import { getAllPlans } from './actions/planActions'
+import { getAllPlans } from './actions/planActions';
+import {getServerDate} from './actions/userActions'
 export class App extends Component {
     componentWillMount(){
         this.props.getAllPlans().then(data=>{
+            this.props.getServerDate()
         })
     }
     render() {
@@ -35,4 +37,4 @@ export class App extends Component {
     }
 }
 
-export default connect(null, {getAllPlans})(App);
+export default connect(null, {getAllPlans, getServerDate})(App);

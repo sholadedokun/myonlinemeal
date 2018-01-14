@@ -4,6 +4,7 @@ import {
   AUTH_ERROR,
   FETCH_OFFERS,
   FETCH_USER,
+  FETCH_SERVER_DATE,
   SWITCH_MODAL_STATE
 } from '../actions/actionTypes';
 
@@ -19,6 +20,8 @@ export default function(state = {error:'', authenticated:'', isOpen:'', page:''}
       return { ...state, userDetails: action.payload };
     case SWITCH_MODAL_STATE:
         return {...state, isOpen:action.payload.isOpen, page:action.payload.page, extraArgument:action.payload.extraArgument}
+    case FETCH_SERVER_DATE:
+        return {...state, serverDate:action.payload.date}
   }
   return state;
 }

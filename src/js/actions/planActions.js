@@ -12,7 +12,7 @@ export function getAllPlans() {
             axios.get(`${ROOT_URL}/plans`)
             .then(response => {
                 dispatch({ type: FETCH_PLANS, payload:response.data });
-
+                resolve()
             })
             .catch(error => {
                 let errorData= error.response.data.error

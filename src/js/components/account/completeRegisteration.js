@@ -60,11 +60,9 @@ class CompleteRegisteration extends Component {
                                         }
                                     </select>
                                 </Col>:''
-
                 }
                 {currentStep!=1? <button onClick={this.next.bind(this, (currentStep-2))}>back</button>:'' }
                 <button onClick={this.next.bind(this, currentStep)}>{currentStep<totalStep?'Continue':'Finish'}</button>
-
             </Row>
         )
     }

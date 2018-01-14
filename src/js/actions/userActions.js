@@ -9,6 +9,7 @@ import {
   SWITCH_MODAL_STATE,
   FETCH_PLANS,
   FETCH_USER,
+  FETCH_SERVER_DATE,
   ROOT_URL
 } from './actionTypes';
 
@@ -44,21 +45,6 @@ export function signUpUser(values) {
                 dispatch({ type: AUTH_USER });
                 localStorage.setItem('MyOnlineMealToken', response.data.token);
                 resolve (response)
-            })
-            .catch(error => {
-                let errorData= error.response.data.error
-                dispatch(authError(errorData));
-            });
-        })
-    }
-}
-export function getAllPlans() {
-    return function(dispatch) {
-        return new Promise( (resolve)=>{
-            axios.get(`${ROOT_URL}/plan`)
-            .then(response => {
-                dispatch({ type: FETCH_PLANS });
-
             })
             .catch(error => {
                 let errorData= error.response.data.error
@@ -135,5 +121,16 @@ export function saveDelivery(deliveryAddress) {
                 resolve()
             });
         })
+    }
+}
+export function getServerDate() {
+    return function(dispatch) {
+        axios.get(`${ROOT_URL}/serverDate`)
+        .then(response => {
+            dispatch({
+                type: FETCH_SERVER_DATE,
+                payload: response.data
+            });
+        });
     }
 }
