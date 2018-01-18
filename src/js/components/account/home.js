@@ -45,9 +45,13 @@ class Home extends Component{
         })
         this.props.getSubScription().then(data =>{
             if(data==null){
-                this.props.modalStatus(true, 'plans')
+                this.props.modalStatus(true, 'plans', null)
             }
-
+            else{
+                //check for active subscription, If there are no active subscription, prompt modal
+                let currentPlan=data.filter(plan=> plan.status=='active');
+                if(currentPlan.length==0) this.props.modalStatus(true, 'plans', null);
+            }
         })
     }
     render(){

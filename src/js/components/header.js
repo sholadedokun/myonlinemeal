@@ -76,7 +76,7 @@ export class Header extends Component {
                             <Login close={this.handleCloseModal.bind(this)} />:
                                 (modalLoad==='register')?
                                 <Register close={this.handleCloseModal.bind(this)} />:
-                                    (modalLoad==='plan')?
+                                    (modalLoad==='plans')?
                                     <Plans close={this.handleCloseModal.bind(this)} />:
                                     <CompleteRegisteration  close={this.handleCloseModal.bind(this)} position={modalOtherArguments} />
                     }
